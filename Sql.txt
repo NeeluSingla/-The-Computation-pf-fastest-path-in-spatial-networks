@@ -1,0 +1,10 @@
+create database TESTDB;
+use TESTDB;
+
+create table FILE_METADATA( FILE_ID serial, FILENAME text , date datetime ,keywords text , constraint primary key(FILE_ID));
+create table URL( URL_ID serial, FILE_ID integer , URL_NAME text , constraint primary key(URL_ID));
+
+create table login_details (username text, password text);
+insert into login_details (username, password) values ('neelu','singla');
+
+alter table url add column resolved boolean default true;
